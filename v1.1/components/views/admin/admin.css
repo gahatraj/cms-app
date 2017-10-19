@@ -1,0 +1,33 @@
+.data-content{
+	height:calc(100vh - 7rem);
+	overflow:auto;
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+    overflow:auto;
+    padding:2rem;
+    /*background-color: #F7F7F7;*/
+}
+.table-data{
+	/*position:absolute;*/
+	z-index:200;	
+	/*width:100%;*/
+	background:rgba(0,0,0,0.5);
+}
+.table-name{
+	height:calc(100vh - 7rem);
+	overflow:auto;
+	width:20rem;
+	background: #FFF;
+	z-index:150;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+.form-area{
+	height:calc(100vh - 7rem);
+	overflow:auto;
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+    overflow:auto;
+    padding:2rem;
+}

@@ -1,0 +1,43 @@
+<div class="wrapper">
+	<header class="header">
+		<button ng-click="vm.showHideMenu()" class="menu">
+			<img ng-src="components/images/ic_menu_black_24dp/ic_menu_black_24dp/web/ic_menu_black_24dp.png">
+		</button>
+		<form name="myForm">
+	    	<label for="singleSelect"> Select Group: </label>
+		    <select name="singleSelect" ng-model="vm.singleSelect" ng-change="vm.selectedGroup(vm.singleSelect)">
+	    	  <option ng-change="vm.selectedGroup(vm.selectAllElements)" ng-model="vm.selectAllElements">All Elements</option>
+		      <option ng-repeat="option in vm.allData | unique:'groupName'">{{option.groupName}}</option>
+		    </select>
+		</form>
+		<button ng-click="vm.mainPage()" class="glyphicon glyphicon-home"></button>
+	</header>
+	<main class="main">
+		<div class="asideWrapper">
+			<aside id="navigation" ng-hide="vm.tracNavigation">
+				<ul>
+					<li data-ng-repeat="menu in vm.menu track by $index" ng-click="vm.loadData($index)">{{menu}}</li>
+				</ul>
+			</aside>
+		</div>
+		<section class="content">
+			<div class="products">
+				<div ng-if="vm.dataLoading">
+				    <div ng-include="'components/loadingMessage/loading.html'"></div>
+				</div>
+				<div ng-repeat="item in vm.allData | filter: vm.singleSelect | limitTo:vm.pageSize" class="item" ng-click="vm.openModal(item)">	
+					<div class="item-image" 
+						style="background:url({{item.image}}); background-repeat: no-repeat; background-size: cover; background-position:center">
+					</div>
+					<div class="item-data">
+						<h2>{{item.elementName}}</h2>
+						<p>{{item.atomicNumber}}</p>
+						<p>{{$index}}</p>
+					</div>
+				</div>
+			</div>
+			<button ng-click="vm.loadMoreData()" class="loadMore" id="loadMore">Load More...</button>
+		</section>
+	</main>
+</div>
+

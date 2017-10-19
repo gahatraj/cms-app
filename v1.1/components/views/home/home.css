@@ -1,0 +1,127 @@
+.asideWrapper{
+	position:absolute;
+	z-index:200;	
+	width:100%;
+	background:rgba(0,0,0,0.5);
+}
+#navigation{
+	height:calc(100vh - 7rem);
+	overflow:auto;
+	width:35rem;
+	background: #FFF;
+	z-index:150;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+#navigation ul {
+	padding:0;
+}
+#navigation ul li{
+	width:100%;
+	padding:10px;
+	border-bottom:1px solid white;
+	color:white;
+	list-style: none;
+	text-align: left;
+	background:rgba(0,0,0,0.7);
+}
+.menu{
+	background:none;
+	border:none;
+}
+.content{
+	height:calc(100vh - 7rem);
+	overflow:auto;
+    width: 100%;
+    margin:0 auto;
+    position: relative;
+    overflow:auto;
+    padding:2rem;
+    background-color: #F7F7F7;
+}
+.products{
+	display:flex !important;
+	min-height:100%;
+	flex-wrap:wrap;
+	justify-content: center;
+}
+.selectedPage{
+	background: orange;
+}
+.item{
+	height:40rem;
+	margin:0.8%;
+	flex-basis: 23%;
+	/*background:rgba(0,0,0,0.7);*/
+	text-align:left;
+	color:black;
+    background: #FFF;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.14);
+}
+.item-image{
+	position:relative;
+	height:250px;
+	background:orange;
+}
+.item-image img{
+	height:100%;
+	width:23%;
+	height:auto;
+	position:center;
+}
+.item-data{
+	padding:5px 10px 5px 10px;
+}
+.loadMore{
+	display:block;
+	margin:auto;
+	background:white;
+	border:none;
+	padding:10px;
+	width:150px;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.14);
+	margin-top:25px;
+}
+@media screen and (max-width: 1400px) {
+	.item{
+		height:40rem;
+		margin:0.8%;
+		flex-basis: 30%;
+	}
+	.item-image{
+		position:relative;
+		height:250px;
+		background:orange;
+	}
+	.item-image img{
+		height:100%;
+		width:30%;
+		height:auto;
+		position:center;
+	}
+}
+@media screen and (max-width: 960px) {
+	.item{
+		height:40rem;
+		margin:0.8%;
+		flex-basis: 45%;
+	}
+	.item-image{
+		position:relative;
+		height:250px;
+		background:orange;
+	}
+}
+@media screen and (max-width: 680px) {
+	.item{
+		height:40rem;
+		margin:3%;
+		flex-basis: 90%;
+		
+	}
+	.item-image{
+		position:relative;
+		height:250px;
+		background:orange;
+	}
+}
+

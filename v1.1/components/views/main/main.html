@@ -1,0 +1,16 @@
+<div class="wrapper">
+	<header class="header"></header>
+	<main class="main">
+		<section class="main-content">
+			<div class="image-carousel"></div>
+			<div class="main-menu">
+				 <button ng-repeat="menu in $root.mainMenu" class="main-menu-button" ng-click="vm.changeLocation($index)">
+					<p>{{menu.name}}</p>
+				</button>
+			</div>
+			<footer>
+				<h3>Footer Info</h3>
+			</footer>
+		</section>	
+	</main>
+</div>
