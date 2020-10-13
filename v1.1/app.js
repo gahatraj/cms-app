@@ -35,7 +35,7 @@
 	function appConfig($urlRouterProvider) {
 		$urlRouterProvider.otherwise('/');
 
-		// AnalyticsProvider.setAccount('UA-411754-13');
+		// AnalyticsProvider.setAccount('accountnumber');
 		// AnalyticsProvider.setDomainName('abc.com'); //to keep all page views under a single domain on the analytics dashboard
 		// if (location.href.indexOf('#') === -1)
 		// 	AnalyticsProvider.ignoreFirstPageLoad(true); //this is to disable that first redirect from location/path to location/path/#/ which is hitting our bounce rates hard
